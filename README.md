@@ -6,9 +6,9 @@
 
 ## Assignments:
 
-*-HTML, CSS framework:  Jose* 
-*-JavaScript:   Tony*
-*-3rd Party/Server-side API's/GitHub Repo:  Alfonso*
+-[]*-HTML, CSS framework:  Jose* 
+-[]*-JavaScript:   Tony*
+-[]*-3rd Party/Server-side API's/GitHub Repo:  Alfonso*
 
 ## CSS Framework:
 
