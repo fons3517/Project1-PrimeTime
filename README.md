@@ -15,8 +15,10 @@
 *MATERIALIZE*
 	
 
-## API's:	1. Yelp Fusion Rest API
-##	        2. Google Maps API
+## API's:	
+
+1. Yelp Fusion Rest API
+2. Google Maps API
 
 ### Schedule:
 
