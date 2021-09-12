@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeTime</title>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <script src="https://kit.fontawesome.com/c934adeba0.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Architects+Daughter&family=Oswald&family=Playfair+Display&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./Assets/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class='headingContainer'>
+
+        <h1>PrimeTime</h1>
+
+        <p>The new web app offering restaruant mapping and selection based off cuisine choices and/or vibe ratings</p>
+
+    </div>
+
+    <div class="interiorContainer">
+
+        <div id="mapContainer">
+
+            <form>
+
+                <div class="distance">
+
+                    <h3>Select search radius:</h3>
+    
+                    <select name="distance" id="locationRest">
+    
+                        <option value="5">5 MI</option>
+                        <option value="10">10 MI</option>
+                        <option value="15">15 MI</option>
+                        <option value="20">20 MI</option>
+    
+                    </select>
+    
+                </div>
+    
+                <!-- <br> -->
+    
+                <!-- <div class="form-section">
+    
+                    <input type="text" id="from" placeholder="Current Location" class="currentLocation"><i class="fas fa-map-pin"></i>
+    
+                </div>
+    
+                <br>
+    
+                <div class="form-section">
+    
+                    <input type="text" id="to" placeholder="Destination" class="destination"><i class="fas fa-bullseye"></i>
+    
+                </div> -->
+
+            </form>
+
+            <br>
+
+            <!-- <div class="mapSearchbtn">
+
+                <button class="btnInfo"><i class="fas fa-route"></i></button>
+
+            </div> -->
+
+            <div class="mapDirections">
+
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
+
+                <div id="googleMap">
+
+                </div>
+
+                <div id="output">
+
+                </div>
+
+            </div>
+        
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div id="cuisineContainer">
+
+        <h2>PrimeTime Cuisine</h2>
+
+        <p>Choose your favorite cuisine:</p>
+
+    </div>
+
+    <div id="cuisineSelection">
+
+        <form class="cuisine">
+
+            <div class="groupRestaraunts">
+
+                <input type="checkbox" id="mexican" name="Mexican" value="Restaurant">
+                <label for="Mexican">Mexican</label><br>
+
+                <input type="checkbox" id="burgers" name="Burgers" value="Restaurant">
+                <label for="Burgers">Burgers</label><br>
+
+                <input type="checkbox" id="americanTraditional" name="American-Traditional" value="Restaurant">
+                <label for="American-Traditional">American-Traditional</label><br>
+
+                <input type="checkbox" id="fastFood" name="Fast-Food" value="Restaurant">
+                <label for="Fast-Food">Fast Food</label><br>
+
+                <input type="checkbox" id="pizza" name="Pizza" value="Restaurant">
+                <label for="Pizza">Pizza</label><br>
+
+                <input type="checkbox" id="chinese" name="Chinese" value="Restaurant">
+                <label for="Chinese">Chinese</label><br>
+
+                <input type="checkbox" id="texMex" name="Tex-Mex" value="Restaurant">
+                <label for="Tex-Mex">Tex-Mex</label><br>
+
+                <input type="checkbox" id="steakhouses" name="Steakhouses" value="Restaurant">
+                <label for="Steakhouses">Steakhouses</label><br>
+
+                <input type="checkbox" id="cafes" name="Cafes" value="Restaurant">
+                <label for="Cafes">Cafes</label><br>
+
+                <input type="checkbox" id="sportsBars" name="Sports-Bars" value="Restaurant">
+                <label for="Sports-Bars">Sports Bars</label><br>
+
+                <input type="checkbox" id="italian" name="Italian" value="Restaurant">
+                <label for="Italian">Italian</label><br>
+
+                <input type="checkbox" id="sushiBars" name="Sushi-Bars" value="Restaurant">
+                <label for="Sushi-Bars">Sushi Bars</label><br>
+
+                <input type="checkbox" id="barbeque" name="Barbeque" value="Restaurant">
+                <label for="Barbeque">Barbeque</label><br><br>
+
+                <input type="submit" value="Submit">
+
+            </div>                    
+
+        </form> 
+
+    </div>  
+            
+    <div id="vibeContainer">
+
+        <h2>PrimeTime Vibe</h2>
+
+        <p>Choose your vibe rating</p>
+
+    </div>
+
+    <div id="vibeSelection">
+
+        <form class="vibe">
+
+            <div class="groupVibe">
+
+                <input type="checkbox" id="zeroStars" name="Zero-Stars" value="Rating">
+                <label for="Zero-Stars">PrimeTime Poor</label><br>
+
+                <input type="checkbox" id="oneStar" name="One-Star" value="Rating">
+                <label for="One-Star">PrimeTime Worthy of Discussion</label><br>
+
+                <input type="checkbox" id="twoStars" name="Two-Stars" value="Rating">
+                <label for="Two-Stars">PrimeTime Place Worth Checking Out </label><br>
+
+                <input type="checkbox" id="threeStars" name="Three-Stars" value="Rating">
+                <label for="Three-Stars">PrimeTime Worth The Drive</label><br>                    
+
+                <input type="checkbox" id="fourStars" name="Four-Stars" value="Rating">
+                <label for="vehicle3">PrimeTime Excellent</label><br>
+
+                <input type="checkbox" id="fiveStars" name="Five-Stars" value="Rating">
+                <label for="Three-Stars">PrimeTime World-Class</label><br><br>
+
+                <input type="submit" value="Submit">
+
+            </div>                    
+
+        </form> 
+
+    </div>      
+
+</div>  
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHU4F7Aio3MCBC0Uy0rIaQmQ3eX5Y8zU&callback=initAutocomplete&libraries=places,geometry&v=weekly"></script>
+
+    <script src="./Assets/script.js"></script>
+
+</body>
+
+</html>

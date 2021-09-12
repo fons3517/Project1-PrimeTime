@@ -1,0 +1,30 @@
+body {
+    color: #153ae5;
+    font-family: 'Oswald', sans-serif;    
+    
+}
+
+.headingContainer {
+    background-color: transparent;
+    margin: 0;
+    padding: 10px;
+}
+
+.headingContainer h1 {
+    font-size: 6em;
+    font-weight: bold;
+}
+
+.headingContainer h1, p {
+    text-align: center;
+}
+
+.headingContainer p {
+    font-size: 2em;
+}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    margin: 20px auto;
+}
