@@ -58,7 +58,7 @@ function initMap() {
  });
 
  const request = {
-   query: "Alamo",
+   query: "chinese restaurants",
    fields: ["name", "geometry"],
  };
 
