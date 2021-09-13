@@ -43,15 +43,20 @@ function displayPhoto(photo_reference){
 
 };
 
+// Get a handle on text area
+var searchInfoEl = document.getElementById("search-info");
+var userInput = searchInfoEl.innerHTML;
+
  // Google map function
 let map;
 let service;
 let infowindow;
 
 function initMap() {
- const city = new google.maps.LatLng(29.424349, -98.491142);
+ const city = new google.maps.LatLng(29.424349, -98.491142); 
 
  infowindow = new google.maps.InfoWindow();
+
  map = new google.maps.Map(document.getElementById("map"), {
    center: city,
    zoom: 15,
@@ -59,7 +64,7 @@ function initMap() {
 
  const request = {
    query: "Alamo",
-   fields: ["name", "geometry"],
+   fields: ["name", "geometry", "opening_hours", ],
  };
 
  service = new google.maps.places.PlacesService(map);
@@ -75,8 +80,8 @@ function initMap() {
  });
 }
 
-
 // createMarker function to drop pin at specified location
+
 function createMarker(place) {
  if (!place.geometry || !place.geometry.location) return;
 
@@ -90,6 +95,7 @@ function createMarker(place) {
    infowindow.open(map);
  });
 }
+
 
 
 // Local Storage 

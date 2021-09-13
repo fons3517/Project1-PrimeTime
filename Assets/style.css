@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .header {
@@ -61,3 +62,9 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+=======
+.maps {
+    height: 500px;
+    width: 400px;
+}
+>>>>>>> bf5c2aabcbcd316d6a382c730ba0b7e4e437785e
