@@ -47,14 +47,11 @@ function displayPhoto(photo_reference){
 var searchInfoEl = document.getElementById("search-info");
 var searchButtonEl = document.getElementById("search");
 
-// addEventListener to searchButtonEl
-
 
  // Google map function
 let map;
 let service;
 let infowindow;
-let latLngEl;
 
 function initMap() {
   if(searchInfoEl.value === "") {
@@ -113,6 +110,9 @@ function createMarker(place) {
    infowindow.open(map);
  });
 }
+
+// addEventListener to searchButtonEl
+
 searchButtonEl.addEventListener("click", function () {
   initMap()
 })
