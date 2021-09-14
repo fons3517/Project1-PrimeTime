@@ -17,4 +17,9 @@
 1. *Google Maps API*
 2. *Google Places API*
 
+## Screenshot of up-to-date website; link to deployed site
+
+[PrimeTime](https://fons3517.github.io/Project1-PrimeTime/)
+
+![Image of PrimeTime webpage](./PrimeTime.JPG)
 
