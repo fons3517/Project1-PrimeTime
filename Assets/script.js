@@ -67,6 +67,7 @@ geoCoder.geocode(geoRequest, (results, status) => {
     console.log(results)
   }
 })
+<<<<<<< HEAD
 map = new google.maps.Map(document.getElementById("map"), {
   center: {
     lat: 29.4241,
@@ -81,6 +82,13 @@ map = new google.maps.Map(document.getElementById("map"), {
 function createMap(results) {
 
   
+=======
+function createMap(results) {
+  
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 10,
+   });
+>>>>>>> origin
   map.fitBounds(results[0].geometry.viewport)
   
 }
@@ -121,6 +129,7 @@ function createMarker(place) {
 }
 
 // addEventListener to searchButtonEl
+<<<<<<< HEAD
 searchButtonEl.addEventListener("click", function () {
   initMap()
   localStorage.setItem("Search Info", searchInfoEl.value)
@@ -130,10 +139,24 @@ setTimeout(function (){
   initMap()
 
 }, 2000);
+=======
+
+searchButtonEl.addEventListener("click", function () {
+  initMap()
+})
+document.addEventListener("DOMContentLoaded", function() {
+  initMap()
+});
+>>>>>>> origin
 
 
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
+<<<<<<< HEAD
 //  localStorage.setItem("Search Info", searchInfoEl.value)
 //  localStorage.getItem(searchInfoEl)
+=======
+ localStorage.setItem('Search Info', searchInfoEl)
+ localStorage.getItem(searchInfoEl)
+>>>>>>> origin
