@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PrimeTime</title>
-    <link rel="style" href="Assets\style.css" />
+    <link rel="stylesheet" href="./Assets/style.css" />
     <!-- Compiled and minified CSS -->
     <link
       rel="stylesheet"
@@ -138,10 +138,12 @@
 
         
       </div class="flow-text">
-      <p class="subtext">"PrimeTime is a web app that allows users to grab updated current
-        information on restaurants close by or search for restaurants matching
-        cuisine choices, how busy a restaurant is, or by looking at
-        user-uploaded videos and pictures."</p>
+      <p class="subtext">PrimeTime is a web app designed to provide access to useful,
+        up-to-date wait times, "vibes", and location information for restaurants,
+        cafes or eateries of your choice. Catch the vibes with user ratings,
+        reviews, and shared media; find what's close and convenient
+        by sharing your location with live maps. Have what you
+        want when you want it. It's PrimeTime!</p>
         
 
 
@@ -172,36 +174,30 @@
       
 
 
-
-    <!-- Maps Box -->
-
-    <div class="row">
-      <!-- Maps box API -->
-      <div class="col s12" id="map">
-        <span class="flow-text">Maps</span>
-        <p>Hello World</p>
-      </div>
-
-
-
-
-
-
-
      <!-- Cuisine Box -->
     <div class="row">
-      <!-- Box 1 Cuisine -->
-      <div class="col s12 m6 l3">
-        <h3>Cuisine</h3>
-        <p>hello world</p>
-      </div>
+     <!-- Box 1 Cuisine -->
+        <div class="col s12 m6 l3">
+            <h3>Cuisine</h3>
+            <p>Brief Description of Cuisine</p>
+        </div>
+
+     <!-- Box 3 Media -->
+        <div class="col s12 m6 l3">
+            <h3>Media</h3>
+            <p>Dining Location Images</p>
+        </div>
+
+      
 
 
-      <!-- Box 3 Media -->
-      <div class="col s12 m6 l3">
-        <h3>Media</h3>
-        <p>hello world</p>
-      </div>
+
+    <div class="row">
+     <!-- Maps box API -->
+        <div class="col s12 m6 l3" id="map">
+            <span class="flow-text">Maps</span>
+            <p>Get Locations, Directions, Reviews</p>
+        </div>
     </div>
 
 
@@ -245,7 +241,10 @@
 
 
     </footer>
-
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&libraries=places&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./Assets/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   </body>

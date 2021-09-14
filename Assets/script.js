@@ -4,7 +4,7 @@ var googleAPIkey = "&key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA";
 // URL's for API calls
 //var googleMapsQueryURL = "https://maps.googleapis.com/maps/api/js?q=key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&callback=initMap";
 var googePlaceDetailsQueryURL1 = "https://maps.googleapis.com/maps/api/place/details/output?q="
-var googlePhotosQueryURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference={}"//question '{}'
+var googlePhotosQueryURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${}"//question '{}'
 var googePlaceDetailsQueryURL2 = "https://maps.googleapis.com/maps/api/place/details/output?place_id={}&fields=q="
 
 
@@ -130,32 +130,8 @@ setTimeout(function (){
   initMap()
 
 }, 2000);
-<<<<<<< HEAD
-=======
-
->>>>>>> da6fdb2356e66d42fcb3252c9094326442221891
 
 
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
-<<<<<<< HEAD
-//  localStorage.setItem("Search Info", searchInfoEl.value)
-//  localStorage.getItem(searchInfoEl)
-=======
-
-
-//  document.addEventListener('DOMContentLoaded', function() {
-//   var elems = document.querySelectorAll('.dropdown-trigger');
-//   var instances = M.Dropdown.init(elems, options);
-// });
-
-// // Or with jQuery
-
-// $('.dropdown-trigger').dropdown();
-
-
-// var instance = M.Dropdown.getInstance(elem);
-//  localStorage.setItem("Search Info", searchInfoEl.value)
-//  localStorage.getItem(searchInfoEl)
->>>>>>> da6fdb2356e66d42fcb3252c9094326442221891
