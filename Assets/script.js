@@ -55,7 +55,7 @@ let infowindow;
 
 function initMap() {
   if(searchInfoEl.value === "") {
-    searchInfoEl.value === ""
+    searchInfoEl.value === "United States"
   }
 let geoCoder = new google.maps.Geocoder()
 let geoRequest = {
@@ -67,11 +67,20 @@ geoCoder.geocode(geoRequest, (results, status) => {
     console.log(results)
   }
 })
+map = new google.maps.Map(document.getElementById("map"), {
+  center: {
+    lat: 29.4241,
+    lng: -98.4936
+  },
+  zoom: 10,
+ });
+ navigator.geolocation.getCurrentPosition(position)
+ function position(myPosition) {
+   console.log(myPosition)
+ }
 function createMap(results) {
+
   
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 10,
-   });
   map.fitBounds(results[0].geometry.viewport)
   
 }
@@ -112,17 +121,19 @@ function createMarker(place) {
 }
 
 // addEventListener to searchButtonEl
-
 searchButtonEl.addEventListener("click", function () {
   initMap()
+  localStorage.setItem("Search Info", searchInfoEl.value)
+  localStorage.getItem(searchInfoEl);
 })
-document.addEventListener("DOMContentLoaded", function() {
+setTimeout(function (){
   initMap()
-});
+
+}, 2000);
 
 
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
- localStorage.setItem('Search Info', searchInfoEl)
- localStorage.getItem(searchInfoEl)
+//  localStorage.setItem("Search Info", searchInfoEl.value)
+//  localStorage.getItem(searchInfoEl)
