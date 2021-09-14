@@ -1,24 +1,25 @@
 # PrimeTime
 
-## User Story:
+## Concept:
 
-### AS A restaurant client, I WANT to access restaurant information that deals with table reservations, wait times, location, ratings, food/drink specials, and nutritional value, SO THAT I may choose the best relative dining option for my experience.
+### PrimeTime is a web app that allows its users to grab updated, current information on restaurants, eateries, and cafe’s in their vacinity; search for desired cuisine by type; find out restaurant wait times, and catch the vibes by simply viewing user ratings and   user-uploaded media, such as photos and videos.
 
-## Assignments:
+## Creators:
 
--[]*-HTML, CSS framework:  Jose* 
--[]*-JavaScript:   Tony*
--[]*-3rd Party/Server-side API's/GitHub Repo:  Alfonso*
+-*-HTML, Materialize (CSS framework): Jose Izquierdo* 
+-*-3rd Party/Server-side API's/JavaScript: Anthony Brown*
+-*-3rd Party/Server-side API's/GitHub Repo: Alfonso Robles*
 
-## CSS Framework:
-
+## CSS Framework
 *MATERIALIZE*
-	
 
-## API's:	
+## API's
+1. *Google Maps API*
+2. *Google Places API*
 
-1. Yelp Fusion Rest API
-2. Google Maps API
+## Screenshot of up-to-date website; link to deployed site
 
-### Schedule:
+[PrimeTime](https://fons3517.github.io/Project1-PrimeTime/)
+
+![Image of PrimeTime webpage](./PrimeTime.JPG)
 
