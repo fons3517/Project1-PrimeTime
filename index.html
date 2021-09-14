@@ -35,7 +35,7 @@
 
         <div id="mapContainer">
 
-            <form>
+            <!-- <form>
 
                 <div class="distance">
 
@@ -51,36 +51,21 @@
                     </select>
     
                 </div>
-    
-                <!-- <br> -->
-    
-                <!-- <div class="form-section">
-    
-                    <input type="text" id="from" placeholder="Current Location" class="currentLocation"><i class="fas fa-map-pin"></i>
-    
-                </div>
-    
-                <br>
-    
-                <div class="form-section">
-    
-                    <input type="text" id="to" placeholder="Destination" class="destination"><i class="fas fa-bullseye"></i>
-    
-                </div> -->
 
-            </form>
-
-            <br>
-
-            <!-- <div class="mapSearchbtn">
-
-                <button class="btnInfo"><i class="fas fa-route"></i></button>
-
-            </div> -->
+            </form> -->
 
             <div class="mapDirections">
 
-                <input id="pac-input" class="controls" type="text" placeholder="Search Box"/>
+                <!-- <select id="food-types" class="form-select" style="width: 30%">
+                    <option>Select a food type</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Italian">Italian</option>    
+                </select>
+                
+                <br> -->
+
+                <!-- <button id="btn-search" type="button" class="btn btn-success" style="margin-bottom: 1%">Search</button> -->
 
                 <div id="googleMap">
 
@@ -108,9 +93,35 @@
 
     <div id="cuisineSelection">
 
-        <form class="cuisine">
+        <div class="container-fluid">
+            <select id="food-types" class="form-select" style="width: 30%">
+                <option>Select a food type</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Fast Food">Fast Food</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Cafes">Cafes</option>
+                <option value="American-Traditional">American-Traditional</option>
+                <option value="Pizza">Pizza</option>
+                <option value="Sushi">Sushi</option>
+                <option value="Steakhouses">Steakhouses</option>    
+            </select>
+            <br>
+            <button id="btn-search" type="button" class="btn btn-success" style="margin-bottom: 1%">Search</button>
+        </div>
+    
+        <div class="container-fluid">
+            <div class="row" id="search-results" style="margin: auto">
+                
+            </div>
+            <!-- Search results are stored here -->
+        </div>
 
-            <div class="groupRestaraunts">
+        <!-- <form class="cuisine">
+
+            <div id="foodTypes" class="groupRestaraunts">
+
+                <option>Select restaruant cuisine choices:</option>
 
                 <input type="checkbox" id="mexican" name="Mexican" value="Restaurant">
                 <label for="Mexican">Mexican</label><br>
@@ -149,25 +160,32 @@
                 <label for="Sushi-Bars">Sushi Bars</label><br>
 
                 <input type="checkbox" id="barbeque" name="Barbeque" value="Restaurant">
-                <label for="Barbeque">Barbeque</label><br><br>
+                <label for="Barbeque">Barbeque</label><br>
 
-                <input type="submit" value="Submit">
+                <input type="submit" id="cuisine-type" value="Submit">
 
             </div>                    
 
-        </form> 
+        </form>  -->
 
-    </div>  
+    </div>
+
+    <div class="search-container">
+        <div class="row" id="search-results" style="margin: auto;"></div>
+    </div>
+
+    <br>
+
             
-    <div id="vibeContainer">
+    <!-- <div id="vibeContainer">
 
         <h2>PrimeTime Vibe</h2>
 
         <p>Choose your vibe rating</p>
 
-    </div>
+    </div> -->
 
-    <div id="vibeSelection">
+    <!-- <div id="vibeSelection">
 
         <form class="vibe">
 
@@ -197,14 +215,20 @@
 
         </form> 
 
-    </div>      
+    </div>       -->
 
 </div>  
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 
+    <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHU4F7Aio3MCBC0Uy0rIaQmQ3eX5Y8zU&libraries=geometry,places&callback=initMap&libraries=&v=weekly"></script> -->
+
     <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHU4F7Aio3MCBC0Uy0rIaQmQ3eX5Y8zU&callback=initAutocomplete&libraries=places,geometry&v=weekly"></script>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHU4F7Aio3MCBC0Uy0rIaQmQ3eX5Y8zU&libraries=places&callback=initMap"></script>
+    
+    <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiHU4F7Aio3MCBC0Uy0rIaQmQ3eX5Y8zU&callback=initAutocomplete&libraries=places,geometry&v=weekly"></script> -->
 
     <script src="./Assets/script.js"></script>
 
