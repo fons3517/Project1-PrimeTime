@@ -2,9 +2,9 @@
 var googleAPIkey = "&key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA";
 
 // URL's for API calls
-//var googleMapsQueryURL = "https://maps.googleapis.com/maps/api/js?q=key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&callback=initMap";
+var googleMapsQueryURL = "https://maps.googleapis.com/maps/api/js?q=key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&callback=initMap";
 var googePlaceDetailsQueryURL1 = "https://maps.googleapis.com/maps/api/place/details/output?q="
-var googlePhotosQueryURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${}"//question '{}'
+var googlePhotosQueryURL = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${}"
 var googePlaceDetailsQueryURL2 = "https://maps.googleapis.com/maps/api/place/details/output?place_id={}&fields=q="
 
 
@@ -47,8 +47,14 @@ function displayPhoto(photo_reference){
 var searchInfoEl = document.getElementById("search-info");
 var searchButtonEl = document.getElementById("search");
 
+// Get handle on media and location-list id's
+// var mediaEl = document.getElementById("media");
+// var locationListEl = document.getElementById("location-list");
+// var listOneEl = document.createElement("li");
+// locationListEl.appendChild(listOneEl);
+// var listOneEl = searchInfoEl.textContent;
 
- // Google map function
+ // Google initMap() map function
 let map;
 let service;
 let infowindow;
@@ -123,9 +129,8 @@ function createMarker(place) {
 // addEventListener to searchButtonEl
 searchButtonEl.addEventListener("click", function () {
   initMap()
-  localStorage.setItem("Search Info", searchInfoEl.value)
-  localStorage.getItem(searchInfoEl);
 })
+
 setTimeout(function (){
   initMap()
 
@@ -135,3 +140,5 @@ setTimeout(function (){
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
+ localStorage.setItem('Location List', searchInfoEl)
+ localStorage.getItem(searchInfoEl);
