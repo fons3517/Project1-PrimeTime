@@ -43,9 +43,10 @@ function displayPhoto(photo_reference){
 
 };
 
-// Get a handle on text area
+// Get a handle on text area and search button
 var searchInfoEl = document.getElementById("search-info");
-var userInput = searchInfoEl.innerHTML;
+var searchButtonEl = document.getElementById("search");
+
 
  // Google map function
 let map;
@@ -53,32 +54,55 @@ let service;
 let infowindow;
 
 function initMap() {
- const city = new google.maps.LatLng(29.424349, -98.491142); 
+  if(searchInfoEl.value === "") {
+    searchInfoEl.value === "United States"
+  }
+let geoCoder = new google.maps.Geocoder()
+let geoRequest = {
+  address: searchInfoEl.value,
+}
+geoCoder.geocode(geoRequest, (results, status) => {
+  if(status === "OK") {
+    createMap(results)
+    console.log(results)
+  }
+})
+map = new google.maps.Map(document.getElementById("map"), {
+  center: {
+    lat: 29.4241,
+    lng: -98.4936
+  },
+  zoom: 10,
+ });
+ navigator.geolocation.getCurrentPosition(position)
+ function position(myPosition) {
+   console.log(myPosition)
+ }
+function createMap(results) {
 
+  
+  map.fitBounds(results[0].geometry.viewport)
+  
+}
  infowindow = new google.maps.InfoWindow();
 
- map = new google.maps.Map(document.getElementById("map"), {
-   center: city,
-   zoom: 15,
- });
+//  const request = {
+//    query: searchInfoEl.innerHTML,
+//    fields: ["name", "geometry"],
+//  };
 
- const request = {
-   query: "Alamo",
-   fields: ["name", "geometry", "opening_hours", ],
- };
+//  service = new google.maps.places.PlacesService(map);
+//  service.findPlaceFromQuery(request, (results, status) => {
+//    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+//      for (let i = 0; i < results.length; i++) {
+//    createMarker(results[i]);
+//    console.log(results[i]);
+//      }
 
- service = new google.maps.places.PlacesService(map);
- service.findPlaceFromQuery(request, (results, status) => {
-   if (status === google.maps.places.PlacesServiceStatus.OK && results) {
-     for (let i = 0; i < results.length; i++) {
-   createMarker(results[i]);
-   console.log(results[i]);
-     }
-
-     map.setCenter(results[0].geometry.location);
-   }
- });
-}
+//      map.setCenter(results[0].geometry.location);
+//    }
+//  });
+ }
 
 // createMarker function to drop pin at specified location
 
@@ -95,6 +119,17 @@ function createMarker(place) {
    infowindow.open(map);
  });
 }
+
+// addEventListener to searchButtonEl
+searchButtonEl.addEventListener("click", function () {
+  initMap()
+  localStorage.setItem("Search Info", searchInfoEl.value)
+  localStorage.getItem(searchInfoEl);
+})
+setTimeout(function (){
+  initMap()
+
+}, 2000);
 
 
 
@@ -114,3 +149,5 @@ function createMarker(place) {
 
 
 // var instance = M.Dropdown.getInstance(elem);
+//  localStorage.setItem("Search Info", searchInfoEl.value)
+//  localStorage.getItem(searchInfoEl)
