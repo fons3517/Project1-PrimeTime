@@ -1,38 +1,252 @@
+<!-- Cuisine Page -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
-    <link rel="stylesheet" href="./Assets/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PrimeTime</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2 d-flex flex-column">
-                <label>
-                    Search...
-                </label>
-                <input id="search-info" type="text">
-                <button class="btn btn-primary" id="search">Search</button>
-                <button class="location" id="button">Share Location</button>
-            </div>
-            <div class="col-md-10">
-                <div id="results">
+    <link rel="style" href="Assets\style.css" />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-                </div>
-            </div>
+    <!-- Compiled and minified JavaScript -->
+  </head>
 
-            <div class="col-md-6 maps" id="map">
-                        
-            </div>
-        </div>
+  
+
+    <style>
+      /* Style the body */
+      body {
+        font-family:"GillSans";
+        margin: 0;
+      }
+
+      
+      /* Header/Logo Title */
+      .header {
+       
+        font-size: 80px;
+        color: rgb(255, 255, 255);
+        padding: 125px;
+        text-align: center;
+        background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3)) , url(./Assets/Photos/pexels-one-shot-2788792.jpg);
+        /* background-image: url("./Assets/Photos/pexels-one-shot-2788792.jpg"); */
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        }
+
+
+        
+
+        .input-box {
+          border: 1px;
+          border-style: hidden;
+          border-radius: 10px;
+
+        }
+       
+       
+
+
+
+
+
+
+      
+      /* Page Content */
+      .content {padding:20px;}
+      </style>
+    
+     
+      
+      <div class="header">
+        <p>PrimeTime</p>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- Search Button -->
+        <a class="waves-effect waves-light btn-large" id="search"><i class="material-icons left"></i>Search</a>
+      
+       <!-- Search Box --> 
+        <nav class="input-box">
+          <div class="nav-wrapper">
+            <form>
+              <div class="input-field">
+                <input id="search-info" type="search" placeholder="Search by: Address, Location, or Restaurant name" required>
+                <label class="label-icon" for="search"><i class="material-icons" >search</i></label>
+                <i class="material-icons">close</i>
+              </div>
+            </form>
+          </div>
+        </nav> 
+
+
+
+
+        <style>
+          .subtext {
+            padding: 0 250px ;
+            font-size: xx-large;
+            text-align: center;
+            font: italic;
+            font-weight: bold;
+            
+            
+
+
+
+
+          }
+
+          @media (max-width: 576px) {
+            .subtext {
+              padding: 10px;
+              font-size: x-large;
+
+            }
+
+
+          }
+
+
+        </style>
+         
+
+
+        
+      </div class="flow-text">
+      <p class="subtext">"PrimeTime is a web app that allows users to grab updated current
+        information on restaurants close by or search for restaurants matching
+        cuisine choices, how busy a restaurant is, or by looking at
+        user-uploaded videos and pictures."</p>
+        
+
+
+      <div
+      
+
+     -->
+      
+
+<!-- I got the text to be over the image  -->
+ 
+<style>
+  img {
+    background-image:url"./Assets/Photos/pexels-one-shot-2788792.jpg" ;
+    width: 100px;
+    height: 600px;
+    object-fit: cover;
+   
+  }
+  </style>   
+
+
+
+  
+
+
+
+      
+
+
+
+    <!-- Maps Box -->
+
+    <div class="row">
+      <!-- Maps box API -->
+      <div class="col s12" id="map">
+        <span class="flow-text">Maps</span>
+        <p>Hello World</p>
+      </div>
+
+
+
+
+
+
+
+     <!-- Cuisine Box -->
+    <div class="row">
+      <!-- Box 1 Cuisine -->
+      <div class="col s12 m6 l3">
+        <h3>Cuisine</h3>
+        <p>hello world</p>
+      </div>
+
+
+      <!-- Box 3 Media -->
+      <div class="col s12 m6 l3">
+        <h3>Media</h3>
+        <p>hello world</p>
+      </div>
     </div>
-        <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&libraries=places&callback=initMap"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="./Assets/script.js"></script>
-<body>   
+
+
+
+
+
+    <footer>
+
+
+
+      <footer class="page-footer grey darken-3">
+        <div class="container ">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">PrimeTime Enterprise LLC.</h5>
+              <p class="grey-text text-lighten-4">We put our dreams to work.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Follow Us</h5>
+              <ul>
+                <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">OnlyFans</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          © 2021 Copyright PrimeTime USA 
+          <a class="grey-text text-lighten-4 right" href="#!">Our Story</a>
+          </div>
+        </div>
+      </footer>
+          
+
+
+
+
+
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  </body>
 </html>

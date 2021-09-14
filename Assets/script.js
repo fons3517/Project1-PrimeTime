@@ -132,8 +132,22 @@ setTimeout(function (){
 }, 2000);
 
 
+
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
+
+
+//  document.addEventListener('DOMContentLoaded', function() {
+//   var elems = document.querySelectorAll('.dropdown-trigger');
+//   var instances = M.Dropdown.init(elems, options);
+// });
+
+// // Or with jQuery
+
+// $('.dropdown-trigger').dropdown();
+
+
+// var instance = M.Dropdown.getInstance(elem);
 //  localStorage.setItem("Search Info", searchInfoEl.value)
 //  localStorage.getItem(searchInfoEl)
