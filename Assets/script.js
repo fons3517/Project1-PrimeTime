@@ -61,7 +61,7 @@ let infowindow;
 
 function initMap() {
   if(searchInfoEl.value === "") {
-    searchInfoEl.value === "San Antonio"
+    searchInfoEl.value === "United States";
   }
 let geoCoder = new google.maps.Geocoder()
 let geoRequest = {
@@ -136,5 +136,5 @@ searchButtonEl.addEventListener("click", function () {
 // Local Storage 
  localStorage.setItem('googleAPIkey', googleAPIkey)
  localStorage.getItem(googleAPIkey)
- localStorage.setItem('Location List', searchInfoEl)
+ localStorage.setItem('Location List', searchInfoEl.value)
  localStorage.getItem(searchInfoEl);

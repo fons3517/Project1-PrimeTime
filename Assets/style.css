@@ -2,6 +2,8 @@
   width: 650px;
   height: 400px;
 }
+
+
 .header {
   padding: 80px;
   text-align: center;
@@ -9,7 +11,6 @@
   color: rgb(0, 1, 88);
   font-size: 60px;
 }
-
 
 
 /* 
@@ -63,8 +64,4 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-.maps {
-    height: 500px;
-    width: 400px;
-}
 
