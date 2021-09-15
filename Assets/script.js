@@ -9,39 +9,39 @@ var googePlaceDetailsQueryURL2 = "https://maps.googleapis.com/maps/api/place/det
 
 
 // Global variables for google functions
-var priceLevel = "&price_level=${price_level}";
+// var priceLevel = "&price_level=${price_level}";
 
 
 // listDetails function to grab place_id and other values... Incomplete and needs work
-function listDetails(place_id){
- $.support.cors = true
+// function listDetails(place_id){
+//  $.support.cors = true
 
-$.ajaxPrefilter(function(options) {
- if (options.crossDomain && $.support.cors) {
-     options.url = 'https://thingproxy.freeboard.io/fetch/' + options.url;
- }
-});
+// $.ajaxPrefilter(function(options) {
+//  if (options.crossDomain && $.support.cors) {
+//      options.url = 'https://thingproxy.freeboard.io/fetch/' + options.url;
+//  }
+// });
 
- $.ajax({
-   url: `https://maps.googleapis.com/maps/api/place/details/output?place_id=${place_id}&fields=rating,price_level,review${googleAPIkey}`,
-   crossDomain:true
+//  $.ajax({
+//    url: `https://maps.googleapis.com/maps/api/place/details/output?place_id=${place_id}&fields=rating,price_level,review${googleAPIkey}`,
+//    crossDomain:true
 
- }).then(function(response){
-   console.log(response);
- })
-};
+//  }).then(function(response){
+//    console.log(response);
+//  })
+// };
 
 // displayPhotos function for generating media from API call to our application's media section
-function displayPhoto(photo_reference){
-  $.ajax({
-    url: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${maxwidth}&photo_reference=${photo_reference}&${googleAPIkey}`,
+// function displayPhoto(photo_reference){
+//   $.ajax({
+//     url: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${maxwidth}&photo_reference=${photo_reference}&${googleAPIkey}`,
     
     
-  }).then(function(response){
-    console.log(response)
-  })
+//   }).then(function(response){
+//     console.log(response)
+//   })
 
-};
+// };
 
 // Get a handle on text area and search button
 var searchInfoEl = document.getElementById("search-info");
@@ -61,7 +61,7 @@ let infowindow;
 
 function initMap() {
   if(searchInfoEl.value === "") {
-    searchInfoEl.value === "United States"
+    searchInfoEl.value === "San Antonio"
   }
 let geoCoder = new google.maps.Geocoder()
 let geoRequest = {
@@ -91,6 +91,7 @@ function createMap(results) {
   
 }
  infowindow = new google.maps.InfoWindow();
+
 
 //  const request = {
 //    query: searchInfoEl.innerHTML,
@@ -129,12 +130,7 @@ function createMarker(place) {
 // addEventListener to searchButtonEl
 searchButtonEl.addEventListener("click", function () {
   initMap()
-})
-
-setTimeout(function (){
-  initMap()
-
-}, 2000);
+});
 
 
 // Local Storage 
