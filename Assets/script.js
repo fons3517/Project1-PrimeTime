@@ -2,6 +2,41 @@
 var googleAPIkey = "&key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA";
 
 // URL's for API calls
+
+// Global variables for google functions
+// var priceLevel = "&price_level=${price_level}";
+
+
+// listDetails function to grab place_id and other values... Incomplete and needs work
+// function listDetails(place_id){
+//  $.support.cors = true
+
+// $.ajaxPrefilter(function(options) {
+//  if (options.crossDomain && $.support.cors) {
+//      options.url = 'https://thingproxy.freeboard.io/fetch/' + options.url;
+//  }
+// });
+
+//  $.ajax({
+//    url: `https://maps.googleapis.com/maps/api/place/details/output?place_id=${place_id}&fields=rating,price_level,review${googleAPIkey}`,
+//    crossDomain:true
+
+//  }).then(function(response){
+//    console.log(response);
+//  })
+// };
+
+// displayPhotos function for generating media from API call to our application's media section
+// function displayPhoto(photo_reference){
+//   $.ajax({
+//     url: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=${maxwidth}&photo_reference=${photo_reference}&${googleAPIkey}`,
+    
+    
+//   }).then(function(response){
+//     console.log(response)
+//   })
+
+// };
 var googleMapsQueryURL =
   "https://maps.googleapis.com/maps/api/js?q=key=AIzaSyDBtZUssCPFYlXLTWnLuM_C1eoULB1B2KA&callback=initMap";
 var googePlaceDetailsQueryURL1 =
@@ -64,7 +99,6 @@ function createMap(results) {
   map.fitBounds(results[0].geometry.viewport);
 }
 infowindow = new google.maps.InfoWindow();
-
 
 
 function createMarker(place) {
