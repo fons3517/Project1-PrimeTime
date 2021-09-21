@@ -7,9 +7,9 @@
 
 ## Creators:
 
-*-HTML, Materialize (CSS framework): Jose Izquierdo* 
-*-3rd Party API's/ JavaScript: Anthony Brown*
-*-3rd Party API's/ JavaScript/ GitHub Repo: Alfonso Robles*
+#### *-HTML, Materialize (CSS framework): Jose Izquierdo* 
+#### *-3rd Party API's/ JavaScript: Anthony Brown*
+#### *-3rd Party API's/ JavaScript/ GitHub Repo: Alfonso Robles*
 
 ## CSS Framework
 *MATERIALIZE*
@@ -23,4 +23,4 @@
 [PrimeTime](https://fons3517.github.io/Project1-PrimeTime/)
 
 ![Image of PrimeTime webpage](./Assets/Photos/PrimeTime.JPG)
-
+![Second screenshot](/Assets/Photos/PrimeTime2.JPG)
